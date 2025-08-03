@@ -15,7 +15,6 @@ class SumCalculatorTest {
 
 	@Test
 	void testSumOfOneWorksCorrect(){
-
 		int actual = sumCalculator.sum(1);
 		int expected = 1;
 
@@ -24,7 +23,6 @@ class SumCalculatorTest {
 
 	@Test
 	void testSumOfNumbersWorksCorrect(){
-
 		int actual = sumCalculator.sum(3);
 		int expected = 6;
 
@@ -33,14 +31,9 @@ class SumCalculatorTest {
 
 	@Test
 	void testAssertThrowForNull(){
-
-		//int actual = sumCalculator.sum(0);
-		Assertions.assertThrows(IllegalArgumentException.class, () -> sumCalculator.sum(0));
-
-
+		Assertions.assertThrows(IllegalArgumentException.class,
+				() -> sumCalculator.sum(0));
 	}
-
-
 
 	@AfterEach
 	void tearDown() {
